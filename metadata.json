@@ -1,0 +1,6 @@
+{
+  "name": "Car Make/Model Validator",
+  "description": "Professional validation, technical specification lookup, and repair registry tool for auto repair shop floor staff.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
