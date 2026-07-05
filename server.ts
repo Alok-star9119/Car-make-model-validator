@@ -37,12 +37,12 @@ if (apiKey && apiKey !== "MY_GEMINI_API_KEY") {
 // API Routes
 
 // 1. Get standard makes
-app.get("/api/makes", (req, res) => {
+app.get("https://car-make-model-validator-47453693119.asia-southeast1.run.app/api/makes", (req, res) => {
   res.json({ makes: VEHICLE_MAKES });
 });
 
 // 2. Get standard models for a given make
-app.get("/api/models", (req, res) => {
+app.get("https://car-make-model-validator-47453693119.asia-southeast1.run.app/api/models", (req, res) => {
   const make = req.query.make as string;
   if (!make) {
     return res.status(400).json({ error: "Missing 'make' query parameter." });
@@ -62,7 +62,7 @@ app.get("/api/models", (req, res) => {
 });
 
 // 3. Validate make and model (incorporates spotty connection simulation & fallbacks)
-app.post("/api/validate", async (req, res) => {
+app.post("https://car-make-model-validator-47453693119.asia-southeast1.run.app/api/validate", async (req, res) => {
   const { make, model, year, simulateOffline, simulateDelay } = req.body;
 
   if (!make || !model || !year) {
